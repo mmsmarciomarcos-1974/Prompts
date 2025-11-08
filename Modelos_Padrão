@@ -1,0 +1,4 @@
+Ex:"Gere um modelo padrão de um programa Cobol qualquer"
+Ex:"Gere um modelo padrão de um programa Cobol, tendo tratamento de abertura, leitura e fechamento de arquivos caso seja diferente de zeros."
+Ex:"Gere uma estrutura de copy, para inclusão de um novo programa, preciso o leiaute tenha os campos da Nota Fiscal Eletrônica."
+Ex:"Gere um modelo padrão de um programa Cobol, tendo tratamento de abertura, leitura e fechamento de arquivos, caso seja diferente de zeros, utilize o copy referencia da Nota Fiscal Eletrônica NF-E-Leiaute.cpy, como sendo leiaute de arquivo de saída, este programa ele terá 2 arquivos de entrada que será feito um balance-line, sendo que o primeiro arquivo se refere ao arquivo pedido e o segundo arquivo é de pedido enviado, no caso de registros iguais, será gerado a saída do arquivo em formato XML."
