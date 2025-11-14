@@ -66,3 +66,36 @@ Ex: "Você é um Especialista em Cobol Senior. Revise o programa abaixo e respon
     - Quais comandos CICS ou chamadas DB2 estão sendo executados ? Liste os comandos encontrados e explique brevemente sua função no programa. 
     - Existem estruturas PERFORM ou GO TO que dificultam a leitura do código ? Se sim, descreva como elas poderiam ser simplificadas para melhorar a legibilidade.'
 
+Ex: "Atue como um Especialista em COBOL-DB2, estou criando um programa e quero uma rotina robusta para tratamento de erros DB2
+    - Na procedure Division, inclua as declarações de tratamento de erros DB2 para SQLWARNING, NOT FOUND e SQLERROR.
+    - Para SQLWARNIN, continue a execução
+    - Para NOT FOUND, redirecione para o parágrafo 9900-NOT-FOUND
+    - Para SQLERROR, redirecione para o parágrafo 9999-ABEND-SQL. Certifique-se de usar a sintaxe correta do COBOL PARA EXECL SQL WHENEVER
+    (Aqui é um tratamento de declarações de erros na Procedure Division)
+
+Ex: "Gere um copybook simulando leiaute da nota fiscal eletronica, considerando também o novo campo CNPJ Alfanumerico, para criação de um programa".
+
+Ex: "Gere um copybook com leiaute de cliente e fornecedor baseado no novo CNPJ Alfanumerico, 
+    - deve conter pelo menos os campos: 
+    - ID(CHAVE) 
+    - NOME  
+    - RAZÃO SOCIAL(SE PESSOA JURIDICA), 
+    - ENDEREÇO, 
+    - BAIRRO, 
+    - CEP, 
+    - CIDADE, 
+    - ESTADO, 
+    - EMAIL, 
+    - TELEFONE COMERCIAL, 
+    - TELEFONE RESIDENCIAL, 
+    - CELULAR(COM UMA FLAG SE TEM WHATSAPP)"
+
+Ex: "Atue como um especialista Cobol, crie um programa COBOL que terá 3 arquivos 
+  - (Entrada) Pedidos (Crie uma nova book, baseado na book criada com leiaute da Nota Fiscal Eletronica)
+  - (Entrada) Fornecedor cliente (sera usada a book que voce gerou)
+  - (Saida) Contem o leiaute da nota fiscal eletronica o que será gravado, quando o Codigo do Cliente do Pedido for igual ao Codigo do Fornecedor Cliente
+  - Gere a primeira versão".
+
+Ex: Preciso que voce crie uma massa de dados ficiticias para os arquivos do programa, que o retorne seja como markdown, para facilitar a manipulação dos dados.
+    - Gere uma massa de dados baseado na book PEDIDOS e gera uma segunda massa de dados baseado no FORNECEDOR_CLIENTE, 
+    - Gere pelo menos 06 registros iguais (com a mesma chave) para o teste unitário do programa." 
