@@ -27,7 +27,7 @@ As pastas deste projeto refletem estes níveis:
 
 * **🧭 Nível 4: Mentor**
     * **Quem é:** O facilitador ou especialista.
-    * **Objetivo:** Criar padrões, guias de boas práticas e templates reutilizáveis (como Stacks do StackSpot) para escalar o conhecimento para toda a equipe.
+    * **Objetivo:** Criar padrões, guias de boas práticas e templates reutilizáveis para escalar o conhecimento para toda a equipe.
     * **Exemplos:** "Guia de Segurança de IA", "Template para documentar um programa".
 
 ## 🗺️ Como Usar este Repositório
