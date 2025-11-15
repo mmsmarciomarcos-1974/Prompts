@@ -33,3 +33,77 @@ Os Mestres usam "meta-instruções" (instruções sobre como executar a instruç
     - Se o 'TIPO-CLIENTE' for 'PJ', gravar o 'NOME' (pos 12, tam 30) e o 'CNPJ' (pos 53, tam 14) no arquivo de saída.
     - Ignorar todos os outros tipos de cliente.
     - O programa deve ter tratamento de erro completo para abertura, leitura e fechamento de ambos os arquivos usando 'FILE-STATUS'.`
+
+## [Engenharia Reversa de Documentação]
+       - Atue como um Analista de Sistemas sênior. Eu vou fornecer um programa COBOL legado completo. Sua tarefa é ler o código e gerar uma documentação em Markdown com as seguintes seções: 
+       - 1. Resumo Funcional (o que o programa faz em termos de negócio). 
+       - 2. Arquivos de Entrada (DDNAME e propósito). 
+       - 3. Arquivos de Saída (DDNAME e propósito). 
+       - 4. Tabelas DB2 Acessadas (Nome da tabela e tipo de acesso: SELECT, UPDATE, INSERT). 
+       - 5. Lista das principais regras de negócio em bullet points. 
+       -- Não explique o código COBOL, explique a regra de negócio por trás dele.
+
+## [Análise de Performance DB2]
+       - Você é um DBA DB2 especialista em performance (tunning). Analise este EXPLAIN de uma query SQL executada via COBOL. Identifique em uma lista numerada: 
+            - 1. Por que o otimizador está escolhendo um 'Tablespace Scan' em vez do índice 'IX_CLIENTE_CPF'. 
+            - 2. Qual estatística (RUNSTATS) provavelmente está desatualizada. 
+            - 3. Sugira uma reescrita da query (mudando a ordem do 'WHERE' ou usando 'HINTS') para forçar o uso do índice. [Colar o EXPLAIN e a Query SQL aqui]
+
+## [Geração de Código Baseado em Requisitos]
+            - Gere um programa COBOL-CICS completo que funcione como um 'detalhe de cliente'. O programa deve: 
+                - 1. Receber um 'ID de Cliente' via COMMAREA. 
+                - 2. Fazer um 'EXEC CICS READ' no arquivo 'CLIENTES' (KSDS) usando o ID. 
+                - 3. Se não encontrar (NOTFND), mover 'Cliente não existe' para o mapa. 
+                - 4. Se encontrar, mover os campos 'NOME', 'ENDERECO' e 'TELEFONE' do registro para os campos de mapa 'NOME-MAP', 'END-MAP', 'TEL-MAP'. 
+                - 5. Enviar o mapa 'MAPCLI1' para o terminal. O programa deve ser pseudoconversacional. Gere todo o código, incluindo a 'WORKING-STORAGE' para o mapa.
+
+## [Refatoração Few-Shot (Aprendizado por Exemplo)]
+       - Quero modernizar meu código COBOL, substituindo 'GO TO' por 'EVALUATE' estruturado. Siga exatamente este padrão:
+            - [EXEMPLO DE ENTRADA]:
+                - IF CAMPO-A = 'SP' GO TO 100-TRATA-SP.
+                - IF CAMPO-A = 'RJ' GO TO 200-TRATA-RJ.
+                - GO TO 900-TRATA-OUTROS.
+            - [EXEMPLO DE SAÍDA]:
+                - EVALUATE CAMPO-A
+                - WHEN 'SP' PERFORM 100-TRATA-SP
+                - WHEN 'RJ' PERFORM 200-TRATA-RJ
+                - WHEN OTHER PERFORM 900-TRATA-OUTROS
+                - END-EVALUATE.
+       Agora, converta o seguinte bloco de código:
+       [Colar o bloco de código legado com IFs e GO TOs]
+
+## [Criação de Massa de Teste Complexa]
+       - Com base neste COPYBOOK [Colar o COPYBOOK aqui], gere 50 registros de dados de teste em formato de texto plano. Siga estas regras: 
+            - 1. O campo 'TIPO-REG' (PIC 99) deve ser '01', '02' ou '05'. 
+            - 2. O campo 'VALOR-TRANSACAO' (PIC 9(7)V99 COMP-3) deve ter valores numéricos entre 100,00 e 5000,00. 
+            - 3. O campo 'DATA-NASC' (PIC 9(8)) deve ser uma data válida no formato 'YYYYMMDD'. 
+            - 4. O campo 'CPF' (PIC 9(11)) deve ser um número de CPF com dígito verificador válido.
+
+## [Análise de Segurança RACF]
+       - Atue como um Administrador de Segurança z/OS (RACF). Recebi este log de violação de acesso (SMF). O usuário 'USRDEV01' tentou acessar o dataset 'PROD.CLIENTES.ARQUIVO' e foi barrado. 
+            - Analise este log e as regras RACF atuais do grupo 'DEV'. Explique qual regra causou a falha e qual regra permitiu a tentativa (se houver), e gere o comando 'PERMIT' exato necessário para dar acesso 'READ' a este usuário, mas apenas para este dataset específico.
+
+## [Design de Modernização (API)]
+       - Você é um Arquiteto de Soluções. Quero expor um programa batch COBOL como uma API assíncrona. O programa lê um arquivo de entrada e gera um relatório. 
+            - Descreva, em uma tabela, 3 arquiteturas possíveis para fazer isso 
+                (Ex: 1. API Gateway + MQ + JCL, 
+                2. z/OS Connect, 
+                3. Batch reescrito em Java). 
+            - As colunas da tabela devem ser 'Abordagem', 'Prós', 'Contras' e 'Ferramentas z/OS Necessárias'.
+
+## [Geração de JCL Complexo]
+       - Gere um JCL para um JOB de produção. O JOB deve ter 4 STEPS: 
+            - 1) STEP01: Deletar o arquivo de saída de ontem 'PROD.RELATORIO.D-1' (usando IEFBR14). 
+            - 2) STEP02: Rodar um 'SORT' para ordenar o arquivo de transações 'PROD.TRANS.D0' (ordenar pela pos 5, tam 10, CH, A) e gravar em 'TEMP.SORTED'. 
+            - 3) STEP03: Executar o programa COBOL 'RELAT001', que lê 'TEMP.SORTED' e grava em 'PROD.RELATORIO.D0'. 
+            - 4) STEP04: Rodar apenas se o STEP03 falhar (COND=(4,LT,STEP03)), executando um programa de 'fallback' chamado 'ERRORELAT'.
+
+## [Otimização de MIPS (CPU)]
+       - Atue como um Analista de Performance (Sysprog). 
+       - Este programa COBOL [Colar o código] está no topo da lista de consumo de MIPS da noite. 
+       - Analise o código (focando nos 'PERFORM VARYING' e comandos 'INSPECT'/'UNSTRING') e sugira 3 otimizações de código específicas para reduzir o consumo de CPU. 
+       - Explique por que sua sugestão economiza MIPS (ex: 'Trocar 'COMPUTE' por 'ADD' reduz conversão de dados').
+
+## [Comparação Técnica CICS]
+       - Compare o uso de 'Canais e Containers' CICS versus a 'COMMAREA' tradicional. 
+            - Gere a resposta em formato de tabela, com as colunas: 'Característica' (Ex: Limite de Tamanho, Complexidade, Reuso), 'COMMAREA' e 'Canais & Containers'. No final, dê uma recomendação de quando usar cada um.
