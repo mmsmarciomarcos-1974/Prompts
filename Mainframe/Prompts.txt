@@ -1,0 +1,101 @@
+___________________________________________________________________________________________________________
+Algumas considerações sobre como escrever um bom prompt.
+O que o prompt espera ?
+  - TAREFA: O que você quer que o prompt faça ? 
+    - Ex: "Escreva um email", "Resuma este texto", "Gere um código".
+  - CONTEXTO: O que eu preciso saber para fazer isso ?
+    - Ex: "O E-mail é para meu chefe", "O texto é sobre o IA", "O Código é em Mainframe".
+  - FORMATO: Como você quer a resposta ? (Opcional, mas ajuda)
+    - Ex: "Em Tópicos", "Use um tom formal", "Em uma tabela", "Seja breve"
+___________________________________________________________________________________________________________
+Conceitos de Tipos de Prompt
+
+- Zero-Shot Prompting
+  - Gere um Modelo Padrão de um programa Cobol
+
+- One-Shot Prompting
+  - Gere um Modelo Padrão de um programa Cobol, tendo tratamento de abertura, leitura e fechamento de arquivos, caso seja diferente de zeros. 
+
+- Few-Shot Prompting
+  - Gere uma estrutura de copy, para inclusão de um novo programa, preciso o leiaute tenha os campos da Nota Fiscal Eletrônica."
+  -  Gere um modelo padrão de um programa Cobol, tendo tratamento de abertura, leitura e fechamento de arquivos, caso seja diferente de zeros, utilize o copy referencia da Nota Fiscal Eletrônica NF-E-Leiaute.cpy, como sendo leiaute de arquivo de saída, este programa ele terá 2 arquivos de entrada que será feito um balance-line, sendo que o primeiro arquivo se refere ao arquivo pedido e o segundo arquivo é de pedido enviado, no caso de registros iguais, será gerado a saída do arquivo em formato XML.
+_____________________________________________________________________________________________________________
+
+Ex:"Gere um modelo padrão de um programa Cobol qualquer"
+
+Ex:"Gere um modelo padrão de um programa Cobol, tendo tratamento de abertura, leitura e fechamento de arquivos caso seja diferente de zeros."
+
+Ex:"Gere uma estrutura de copy, para inclusão de um novo programa, preciso o leiaute tenha os campos da Nota Fiscal Eletrônica."
+
+Ex:"Gere um modelo padrão de um programa Cobol, tendo tratamento de abertura, leitura e fechamento de arquivos, caso seja diferente de zeros, utilize o copy referencia da Nota Fiscal Eletrônica NF-E-Leiaute.cpy, como sendo leiaute de arquivo de saída, este programa ele terá 2 arquivos de entrada que será feito um balance-line, sendo que o primeiro arquivo se refere ao arquivo pedido e o segundo arquivo é de pedido enviado, no caso de registros iguais, será gerado a saída do arquivo em formato XML."
+
+Ex: "Me dá um programa COBOL que usa VSAM".
+
+Ex: "Preciso de um esqueleto de programa COBOL Batch para acessar um arquivo VSAM KSDS de forma randômica (ACCESS IS RANDOM). 
+    O DDNAME é ARQVSAM e a chave é ID-CLIENTE.
+    O programa deve ler um registro, alterar um campo e depois regravar.
+    Por favor, inclua tratamento de erro com FILE STATUS."
+
+Ex: "Atue como programador COBOL Sênior, gere um esqueleto de um programa COBOL Batch para interagir com um arquivo VSAM KSDS."
+    Requisitos: 
+    O arquivo VSAM (DDNAME ARQVSAM), será acessado de forma randômica (ACESS IS RANDOM).
+    O copybook do registro é REGVSAM.CPY e o campo-chave (Record Key) é VSAM-ID-CLIENTE.
+    O programa dev ter um FILE STATUS (ex: WS-FS-VSAM) para tratamento de erros.
+    Gere a PROCEDURE DIVISION com 3 parágrafos de exemplo:
+    1000-OPEN-FILE: Abre o arquivo com 3 parágrafos de exemplo.
+    2000-READ-FILE: Move um valor de exemplo (ex:'12345') para a chave VSAM-ID-CLIENTE. Executa o READ no ARQVSAM.
+    Inclui um EVALUATE (ou IF) para checar o WS-FS-VSAM (para '00' - OK, '23' - Não encontrado, e 'default' - 'Erro Grave, programa cancelado'
+    3000-REWRITE-FILE: (Supondo que o registro foi lido), altera um campo (ex: 'MOVE 'NOME ALTERADO' to VSAM-NOME-CLIENTE). Executa o REWRITE, inclui checagem do FILE STATUS.
+    9000-CLOSE-FILE: Fecha o arquivo."
+
+Ex: "Atue como um Especialista de Sistemas Cobol Sênior. Revise o programa acima e identifique o seguinte:
+    - Qual a lógica do negócio principal na Procedure Division?
+    - Quais arquivos (Files) são lidos ou gravados ?
+    - Quais comandos CICS ou chamadas DB2 (SQL) estão sendo executados ?
+    - Existem PERFORMS ou GO TOs complexos que dificultam a leitura ?"
+
+Ex: "Você é um Especialista em Cobol com experiência em sistemas legados. Analise o programa abaixo e avalie:
+    - A clareza da lóica do negócio principal na Procedure Division, ela está bem estruturada ? Há pontos que poderiam ser otimizados ?
+    - O uso de arquivos no programa: Quais arquivos são lidos ou gravados ? Os comandos relacionados aos arquivos estão sendo usados corretamente ?
+    - A implementação de comandos CICS ou chamadas DB2 (SQL): Eles seguem boas práticas? Há algo que poderia ser melhorado ?
+    - A complexidade das estruturas PERFORM ou GO TO: Elas estão dificultando a leitura do código ? Como você recomendaria simplificar essas estruturas ?"
+
+Ex: "Você é um Especialista em Cobol Senior. Revise o programa abaixo e responda às seguintes perguntas:
+    - Qual a lógica do negócio principal implementada na Procedure Division ?
+    - Quais arquivos (Files) são lidos ou gravados no programa ? Identifique os comandos relacionados a esses arquivos (READ, WRITE, REWRITE).
+    - Quais comandos CICS ou chamadas DB2 estão sendo executados ? Liste os comandos encontrados e explique brevemente sua função no programa. 
+    - Existem estruturas PERFORM ou GO TO que dificultam a leitura do código ? Se sim, descreva como elas poderiam ser simplificadas para melhorar a legibilidade.'
+
+Ex: "Atue como um Especialista em COBOL-DB2, estou criando um programa e quero uma rotina robusta para tratamento de erros DB2
+    - Na procedure Division, inclua as declarações de tratamento de erros DB2 para SQLWARNING, NOT FOUND e SQLERROR.
+    - Para SQLWARNIN, continue a execução
+    - Para NOT FOUND, redirecione para o parágrafo 9900-NOT-FOUND
+    - Para SQLERROR, redirecione para o parágrafo 9999-ABEND-SQL. Certifique-se de usar a sintaxe correta do COBOL PARA EXECL SQL WHENEVER
+    (Aqui é um tratamento de declarações de erros na Procedure Division)
+
+Ex: "Gere um copybook simulando leiaute da nota fiscal eletronica, considerando também o novo campo CNPJ Alfanumerico, para criação de um programa".
+
+Ex: "Gere um copybook com leiaute de cliente e fornecedor baseado no novo CNPJ Alfanumerico, 
+    - deve conter pelo menos os campos: 
+    - ID(CHAVE) 
+    - NOME  
+    - RAZÃO SOCIAL(SE PESSOA JURIDICA), 
+    - ENDEREÇO, 
+    - BAIRRO, 
+    - CEP, 
+    - CIDADE, 
+    - ESTADO, 
+    - EMAIL, 
+    - TELEFONE COMERCIAL, 
+    - TELEFONE RESIDENCIAL, 
+    - CELULAR(COM UMA FLAG SE TEM WHATSAPP)"
+
+Ex: "Atue como um especialista Cobol, crie um programa COBOL que terá 3 arquivos 
+  - (Entrada) Pedidos (Crie uma nova book, baseado na book criada com leiaute da Nota Fiscal Eletronica)
+  - (Entrada) Fornecedor cliente (sera usada a book que voce gerou)
+  - (Saida) Contem o leiaute da nota fiscal eletronica o que será gravado, quando o Codigo do Cliente do Pedido for igual ao Codigo do Fornecedor Cliente
+  - Gere a primeira versão".
+
+Ex: Preciso que voce crie uma massa de dados ficiticias para os arquivos do programa, que o retorne seja como markdown, para facilitar a manipulação dos dados.
+    - Gere uma massa de dados baseado na book PEDIDOS e gera uma segunda massa de dados baseado no FORNECEDOR_CLIENTE, 
+    - Gere pelo menos 06 registros iguais (com a mesma chave) para o teste unitário do programa." 
