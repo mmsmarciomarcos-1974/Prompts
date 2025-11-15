@@ -39,7 +39,7 @@ As pastas deste projeto refletem estes níveis:
 
 ### Navegação Rápida
 
-* [`📁 /Nivel-1-Aprendiz`](./Nivel-1-Aprendiz) - Prompts prontos para uso imediato.
+* [`📁 /Nivel-1-Aprendiz`](.Mainframe/Kit de Ferramentas do Aprendiz). - Prompts prontos para uso imediato.
 * [`📁 /Nivel-2-Artesao`](./Nivel-2-Artesao) - Exemplos de como adicionar seu contexto.
 * [`📁 /Nivel-3-Mestre`](./Nivel-3-Mestre) - Técnicas avançadas de engenharia de prompt.
 * [`📁 /Nivel-4-Mentor`](./Nivel-4-Mentor) - Guias de boas práticas, padrões e templates.
