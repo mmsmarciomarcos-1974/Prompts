@@ -1,0 +1,31 @@
+O Aprendiz pergunta O que é um S0C7?. O Artesão pergunta Onde está o meu S0C7?.
+
+##COBOL:
+    - Estou recebendo um ABEND S0C7 neste trecho de código. Qual campo provavelmente está causando o erro? [Colar o trecho da PROCEDURE e a WORKING-STORAGE dos campos envolvidos]
+    - O meu 'FILE-STATUS' está retornando '35' (Arquivo não encontrado) na abertura deste arquivo, mas tenho certeza que ele existe. Este é o meu JCL e este é o 'SELECT' no COBOL. Vê algum erro na associação do 'DDNAME'?
+
+##JCL:
+    - Este JCL está falhando com o erro 'JCL ERROR - UNIDENTIFIED KEYWORD'. Onde está o erro de sintaxe? [Colar o JCL]
+
+##DB2/SQL:
+    - Estou tentando rodar este 'UPDATE' e estou recebendo um SQLCODE -811 (mais de uma linha retornada). Como posso corrigir esta query para atualizar apenas um registro? [Colar a query SQL]
+
+##Otimização e Refatoração (Os Como melhorar...)
+    O Artesão quer melhorar um código que já existe, mas que está lento ou mal escrito.
+
+    ##COBOL:
+      - Este programa COBOL está lento. A maior parte do tempo é gasta neste 'PERFORM' que lê um arquivo e faz um 'READ' em uma tabela interna. Como posso otimizar esta busca? [Colar o trecho do 'PERFORM' e a definição da tabela]
+      - Eu tenho este programa cheio de 'GO TO'. Como eu posso refatorar este trecho específico para usar 'PERFORM... UNTIL' ou 'EVALUATE' sem quebrar a lógica? [Colar o trecho de código]
+
+    ##DB2/SQL:
+      - O 'EXPLAIN' desta query está mostrando um 'TABLESPACE SCAN'. Como posso reescrevê-la para tentar usar o índice 'IX_CLIENTE_CIDADE'? [Colar a query e a definição do índice]
+
+    ##Geração de Código Baseada em Contexto (Os Gere para mim...)
+      - Esta é a evolução do Nível 1. Em vez de pedir um programa qualquer, o Artesão fornece os requisitos (como os Copybooks).
+    
+    ##COBOL:
+      -  (O seu exemplo: Gere um modelo padrão de um programa Cobol, tendo tratamento de abertura, leitura e fechamento de arquivos caso seja diferente de zeros.)
+      - Gere conforme este COPYBOOK de entrada, gere a 'PROCEDURE DIVISION' que move todos os campos da entrada para o COPYBOOK de saída. [Colar o COPYBOOK de entrada e o de saída]
+
+    ##JCL:
+      - Eu tenho este JCL de compilação. Adicione um novo 'STEP' no final que execute o programa compilado. O programa (nome 'PROG123') precisa ler um arquivo com DSN 'TESTE.ARQ.ENTRADA'. O 'DDNAME' no programa é 'ENTRADA'.
