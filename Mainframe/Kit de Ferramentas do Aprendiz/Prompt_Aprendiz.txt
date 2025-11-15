@@ -1,0 +1,120 @@
+Skip to content
+Navigation Menu
+mmsmarciomarcos-1974
+Prompts
+
+Type / to search
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+Files
+Go to file
+Mainframe content loaded
+Mainframe
+Guias do Mentor/Principios de Design de Prompt
+Dicas.txt
+Kit de Ferramentas do Aprendiz
+Dicas.txt
+Projetos de Mestre
+Técnicas de Artesão
+.gitkeep
+Prompts.txt
+README.md
+Prompts/Mainframe/Kit de Ferramentas do Aprendiz
+/
+Name your file...
+in
+main
+
+Edit
+
+Preview
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+- O que é um ABEND S0C7?
+- Qual a diferença entre um arquivo VSAM KSDS e ESDS?
+- Gere um JCL simples para alocar um arquivo sequencial (PS)
+- Explique o que faz o comando CICS ‘READ FILE’.
+
+## JCL/Utilitários:
+    - Para que serve o utilitário IDACMS ? Me dê um exemplo de comando ‘DEFINE CLUSTER’.
+    - O que significa ‘DISP=(NEW,CATLG,DELETE)’ em um JCL?
+    - Para que serve o utilitário IEFBR14
+ 
+## ABENDs e Erros:
+    - O que causa um ABEND S0C7 e como eu o evito?
+    - O que significa um ABEND S0C4? Quais as causas mais comuns?
+ 
+## DB2/SQL:
+    - O que significa o SQLCODE = +100 em um programa COBOL com DB2?
+    - O que significa o SQLCODE = -805?
+ 
+## Conceitos COBOL:
+    - Qual a diferença entre um 'PERFORM' e um 'PERFORM VARYING' no COBOL?
+    - O que é 'FILE-STATUS' no COBOL e por que ele é importante?
+ 
+## Conceitos CICS:
+    - O que é o 'EIB' (EXEC Interface Block) no CICS?
+    - Qual a diferença entre um programa CICS 'conversacional' e 'pseudoconversacional'?
+
+## Geração de Código Simples (Os Gere um...)
+    - Aqui, o usuário pede um esqueleto ou um trecho de código muito específico, sem regras de negócio.
+    ## JCL:
+    - Gere um modelo padrão de um programa Cobol qualquer
+    - Gere um JCL para alocar um arquivo sequencial (PS) com LRECL=80, RECFM=FB e SPACE=(TRK,(10,5)).
+    - Gere um JCL simples para compilar e executar um programa COBOL.
+    - Gere um JCL com um step para rodar um IEFBR14 e deletar um arquivo.
+    ## COBOL:
+    - (O que você já tinha: Gere um modelo padrão de um programa Cobol qualquer.)
+    - Gere a WORKING-STORAGE para uma variável de data no formato 'YYYY-MM-DD'.
+    - Gere um trecho de código COBOL para ler um arquivo sequencial até o fim (AT END).
+ 
+## DB2/SQL:
+    - Gere um comando 'SELECT' SQL para buscar todos os dados da    tabela 'TCLIENTE' onde o campo 'CIDADE' seja 'CURITIBA'.
+    - Gere o comando DDL 'CREATE TABLE' para uma tabela de 'PRODUTOS'   com 'ID' (Integer), 'NOME' (Varchar 30) e 'PRECO' (Decimal 9,2).
+New File at Mainframe/Kit de Ferramentas do Aprendiz · mmsmarciomarcos-1974/Prompts
