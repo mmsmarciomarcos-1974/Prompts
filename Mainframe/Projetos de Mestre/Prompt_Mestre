@@ -1,0 +1,35 @@
+Os Mestres usam "meta-instruções" (instruções sobre como executar a instrução) para guiar a IA.
+
+## Atribuição de Persona e Definição de Saída (Os Atue como...)
+    - Esta é a técnica mais poderosa. O Mestre define o especialista que a IA deve encarnar e o formato da resposta.
+
+## Design de Solução:
+    - Atue como um Arquiteto de Soluções Mainframe. Estou planejando modernizar um batch COBOL noturno que lê 20 milhões de registros e atualiza o DB2. A janela de processamento está muito curta. Me dê 3 opções de modernização, comparando-as em uma tabela com as colunas: 'Abordagem', 'Prós', 'Contras' e 'Nível de Esforço'.
+
+##  Análise de Segurança:
+    - Você é um especialista em segurança z/OS e RACF. Recebi um relatório de auditoria apontando uma falha de 'acesso indevido' a um dataset de produção. Analise este JCL de produção e esta regra RACF. Identifique em uma lista numerada as possíveis brechas de segurança e sugira a regra RACF corrigida. Não inclua explicações genéricas, foque apenas na análise.
+
+## Geração de Documentação:
+    - Eu vou fornecer um programa COBOL legado. Sua tarefa é atuar como um Analista de Negócios e documentar as regras de negócio que este programa executa. Foque em explicar *o que* o programa faz (a regra de negócio), e não *como* ele faz (o código). Gere a saída no formato Markdown. [Depois deste prompt, o usuário cola o código COBOL]
+
+## Aprendizado por Exemplo (Os Siga este padrão...)
+    - O Mestre ensina a IA a realizar uma tarefa repetitiva mostrando a ela um exemplo (técnica One-Shot ou Few-Shot).
+
+## Modernização / Refatoração em Larga Escala:
+    - Quero converter comandos CICS 'EXEC CICS' em chamadas de API. Siga o padrão abaixo: 
+      Exemplo de Entrada (COBOL): EXEC CICS READ FILE('CLIENTES') RIDFLD(WS-CPF) INTO(REG-CLIENTE) END-EXEC. 
+      Exemplo de Saída (Pseudocódigo API): CALL 'APICLIENT' USING 'GET', 'http://api/clientes/', WS-CPF, REG-CLIENTE.
+    - Agora, converta o seguinte bloco de código usando EXATAMENTE o mesmo padrão: [Colar 10 ou 15 comandos CICS diferentes]`
+    ## Criação de Dados de Teste:
+        - Gere 10 registros de dados de teste (em formato de texto plano) para este COPYBOOK COBOL. Siga o layout exato. [Colar o COPYBOOK]
+
+## Geração de Código a partir de Regras de Negócio
+    - Este é o oposto de documentar código. Aqui, o Mestre descreve as regras de negócio (em linguagem natural) e pede à IA para gerar o código-fonte.
+
+## COBOL:
+    - Gere um programa COBOL completo (todas as DIVISIONs) que leia um arquivo de entrada (RECFM=FB, LRECL=80) e grave um arquivo de saída (RECFM=FB, LRECL=50). O programa deve seguir estas regras:
+    - Ler o arquivo de entrada 'ARQENT'.
+    - Se o campo 'TIPO-CLIENTE' (na posição 10, tamanho 2) for 'PF', gravar o 'NOME' (pos 12, tam 30) e o 'CPF' (pos 42, tam 11) no arquivo de saída 'ARQSAI'.
+    - Se o 'TIPO-CLIENTE' for 'PJ', gravar o 'NOME' (pos 12, tam 30) e o 'CNPJ' (pos 53, tam 14) no arquivo de saída.
+    - Ignorar todos os outros tipos de cliente.
+    - O programa deve ter tratamento de erro completo para abertura, leitura e fechamento de ambos os arquivos usando 'FILE-STATUS'.`
