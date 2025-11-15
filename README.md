@@ -66,11 +66,4 @@ Use a IA para a **lógica** e o **padrão**, não para os **dados**.
 
 ## 🤝 Como Contribuir
 
-Este é um repositório vivo! Se você criou um prompt que funcionou muito bem, ajude a comunidade:
-
-1.  Crie um novo arquivo `.md` na pasta do nível correspondente.
-2.  Use o padrão `TITULO-DO-PROMPT.md` para o nome do arquivo.
-3.  Dentro do arquivo, coloque o prompt (usando `bloco de código`) e uma breve explicação do que ele faz.
-4.  Abra um "Pull Request" para que seu prompt seja adicionado.
-
 Vamos modernizar o Mainframe juntos!
