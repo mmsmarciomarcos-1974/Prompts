@@ -20,3 +20,68 @@ O Mentor cria os multiplicadores de força. Muitas vezes, os prompts desse níve
         - Eu sou um facilitador de IA para uma equipe de desenvolvedores mainframe. Meus colegas estão divididos nos 4 níveis: Aprendiz, Artesão, Mestre e Mentor. Crie um plano de treinamento de 1 mês para ajudar os 'Aprendizes' a se tornarem 'Artesãos'. Detalhe quais 'aulas' ou 'desafios' eu devo passar a cada semana.
     - Prompt para Vender a Ideia:
         ◦ Gere 5 bullet points para um e-mail destinado a um gerente de mainframe, explicando os benefícios de negócios (ROI) de usar IA para otimizar programas COBOL. Foque em 'redução de MIPS', 'diminuição de ABENDs em produção' e 'aceleração da modernização'.
+
+## [Criação de Template (StackSpot)]
+       Quero criar um Stack do StackSpot para 'Gerar Programa COBOL de Leitura'. 
+       O usuário final (Aprendiz/Artesão) deve inserir 3 variáveis: 
+       - ${copybook_entrada}, 
+       - ${ddname_entrada} 
+       - e ${ddname_saida}. 
+       - Gere o prompt 'mestre' final (em português, se necessário) que o StackSpot usará. 
+            - O prompt deve instruir a IA a gerar um programa COBOL completo (todas as DIVISIONs) que leia o arquivo de entrada até o fim (AT END) e mova todos os campos do copybook de entrada para o de saída, com tratamento de erro de FILE-STATUS.
+
+## [Geração de Guia de Boas Práticas (Segurança)]
+       - Atue como CISO. Gere a 'Política Oficial de Uso de IA Generativa' para o departamento Mainframe. O documento deve ser formal, em Markdown, e ter 4 seções: 
+            - 1. Introdução (O poder da IA). 
+            - 2. O que é Permitido (Otimizar código genérico, aprender conceitos, gerar JCL). 
+            - 3. O que é ESTRITAMENTE PROIBIDO (Dados de clientes, CPFs, senhas, código-fonte proprietário com segredos de negócio). 
+            - 4. Consequências
+
+## [Criação de Plano de Treinamento]
+       - Eu sou o facilitador de IA. Crie um plano de treinamento de 1 mês para levar 10 desenvolvedores COBOL do Nível 1 (Aprendiz) para o Nível 2 (Artesão). Detalhe as atividades semanais.
+            - Semana 1: Foco em 'O que é um prompt de Artesão?' (Diferença de contexto).
+            - Semana 2: Desafio Prático (Depurando um S0C7).
+            - Semana 3: Desafio Prático (Otimizando uma query DB2).
+            - Semana 4: 'Show and Tell' (Cada um apresenta um prompt de Artesão que criou).
+
+## [Geração de Argumento de ROI (Venda Interna)]
+       - Gere o texto para um e-mail destinado ao meu Gerente de TI, justificando a compra de licenças de uma ferramenta de IA (como StackSpot ou Copilot). 
+       - O e-mail deve focar em 3 pontos de ROI (Retorno sobre Investimento) para o Mainframe: 
+            - 1. Redução de Custo Operacional (MIPS). 
+            - 2. Aceleração de Modernização (Time-to-market). 
+            - 3. Mitigação de Risco (Documentação de código legado e onboarding de novos desenvolvedores).
+
+## [Meta-Prompt: Construtor de Persona]
+       - Crie um prompt 'construtor de persona'. Eu quero um prompt onde eu (Mentor) possa simplesmente dizer [PAPEL], [EXPERIÊNCIA] e [ESPECIALIDADE], e ele me devolva uma definição de persona Nível 3 completa e bem escrita para eu usar em outros prompts. 
+       - Gere o prompt 'molde' que eu vou usar para isso.
+
+## [Geração de Guia de Estilo (Padrão)]
+       - Crie as '5 Regras de Ouro da Engenharia de Prompt' para o README.md do nosso repositório GIT. 
+       - As regras devem ser curtas, fáceis de lembrar e focadas em ação. Ex: 
+            - '1. Dê um Papel: Comece com 'Atue como...', 
+            - '2. Dê Contexto: Cole seu código/erro', 
+            - '3. Diga o Formato: Peça tabelas ou JSON', etc.
+
+## [Criação de Desafio (Gamificação)]
+       - Desenvolva um 'Desafio de Prompt' de Nível 3 (Mestre). O desafio é: 'Otimizar um JCL'. Descreva o cenário:
+            - (Ex: Um JOB noturno está estourando a janela), forneça o JCL 'ruim' 
+            - (Ex: alocações ruins, steps sequenciais que poderiam ser paralelos) e defina os 'Critérios de Aceite' 
+            - (Ex: O JCL final deve rodar em menos steps, usar menos 'SPACE' e ter tratamento de 'COND' correto).
+
+## [Meta-Prompt: Revisor de Qualidade]
+       - Crie um prompt de 'Revisor de Qualidade'. Eu vou fornecer um prompt criado por um colega. 
+            - Sua tarefa (IA) será analisar o prompt e me dizer: 
+            - 1. Em qual nível (1-4) ele se encaixa. 
+            - 2. Por que ele se encaixa nesse nível. 
+            - 3. Como ele poderia ser melhorado para subir de nível 
+                - (ex: 'Este é Nível 2. Para ser Nível 3, adicione uma persona e peça o formato da saída em JSON').
+
+## [Criação de Padrão (Template JSON para Documentação)]
+       - Quero padronizar como documentamos programas COBOL usando IA. 
+       - Crie um prompt Nível 4 que instrua a IA (Nível 3) a sempre gerar a documentação de um programa COBOL em um formato JSON específico. 
+       - Defina a estrutura JSON (Ex: {'programa': '', 'funcao': '', 'arquivos': [{'nome': '', 'dd': '', 'tipo': 'IN/OUT'}], 'regras_negocio': []}).
+
+## [Engajamento de Comunidade]
+       - Gere uma mensagem para o nosso canal do Teams/Slack para incentivar a colaboração no repositório GIT de prompts. 
+            - A mensagem deve ser empolgante, celebrar as contribuições recentes (mencionar os níveis 1-4) e fazer uma 'Chamada para Ação' 
+            -(Ex: 'Qual foi o prompt mais útil que você usou esta semana? Compartilhe aqui!').
