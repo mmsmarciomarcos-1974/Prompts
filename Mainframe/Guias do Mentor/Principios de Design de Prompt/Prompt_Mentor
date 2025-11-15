@@ -1,0 +1,22 @@
+O Mentor cria os multiplicadores de força. Muitas vezes, os prompts desse nível são meta-prompts (prompts sobre como criar prompts).
+
+## Criação de Templates Padronizados (O Coração do StackSpot)
+    - O Mentor cria o prompt mestre que será transformado em um template (Stack) para os outros usarem.
+    - Prompt para criar um Template (Meta-prompt):
+        - Eu quero criar um template de prompt para o StackSpot. A tarefa é 'Analisar um ABEND'. O usuário final (Artesão) precisará inserir: 1. O código do ABEND (ex: S0C7). 2. O trecho do código COBOL onde ocorreu o erro. 3. O trecho do JCL. Crie o *prompt final* que o StackSpot usará. Ele deve instruir a IA a atuar como um 'Especialista em depuração z/OS', analisar as 3 entradas e fornecer: 1. A causa provável. 2. A linha exata do problema. 3. A sugestão de correção. Use ${ab_code}`, `${cobol_code}e${jcl_code} como placeholders.
+    - Definição de Personas Reutilizáveis:
+        - Crie uma 'Definição de Persona Mestre' para um 'DBA DB2 Sênior'. Eu vou copiar e colar esta persona no início dos meus prompts de Nível 3. A persona deve ter 20 anos de experiência, ser especialista em otimização de queries SQL dentro de programas COBOL, 'EXPLAIN', design de índices e tunning de performance. A persona deve ser direta e focar em soluções práticas.
+
+## Definição de Guias e Boas Práticas (Os Playbooks)
+    - O Mentor é quem escreve as regras do jogo, garantindo que a IA seja usada de forma eficaz e segura.
+    - Prompt para criar um Guia de Segurança:
+        - Atue como um Chefe de Segurança da Informação (CISO). Gere um 'Guia Rápido de Boas Práticas' para desenvolvedores mainframe usando IA Generativa. O guia deve ser em bullet points e focar no que NUNCA deve ser enviado para a IA (ex: dados de clientes, senhas, código-fonte proprietário). O tom deve ser sério e direto.
+    - Prompt para criar um Guia de Estilo:
+        - Crie um 'Guia de Estilo de Prompt' para a nossa equipe. O guia deve ter 5 regras principais que todo desenvolvedor deve seguir para obter boas respostas da IA. (Ex: 'Regra 1: Sempre atribua um papel', 'Regra 2: Forneça o contexto', etc.). Mantenha-o curto e fácil de lembrar.
+
+## Planejamento Estratégico e Ensino
+    - O Mentor usa a IA para planejar a própria estratégia de adoção.
+    - Prompt para criar um Plano de Treinamento:
+        - Eu sou um facilitador de IA para uma equipe de desenvolvedores mainframe. Meus colegas estão divididos nos 4 níveis: Aprendiz, Artesão, Mestre e Mentor. Crie um plano de treinamento de 1 mês para ajudar os 'Aprendizes' a se tornarem 'Artesãos'. Detalhe quais 'aulas' ou 'desafios' eu devo passar a cada semana.
+    - Prompt para Vender a Ideia:
+        ◦ Gere 5 bullet points para um e-mail destinado a um gerente de mainframe, explicando os benefícios de negócios (ROI) de usar IA para otimizar programas COBOL. Foque em 'redução de MIPS', 'diminuição de ABENDs em produção' e 'aceleração da modernização'.
