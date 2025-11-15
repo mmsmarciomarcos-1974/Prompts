@@ -26,7 +26,7 @@ As pastas deste projeto refletem estes níveis:
     * **Exemplos:** "Atue como um DBA sênior e analise...", "Gere um programa COBOL completo com estas 5 regras de negócio".
 
 * **🧭 Nível 4: Mentor**
-    * **Quem é:** O facilitador ou especialista (como você!).
+    * **Quem é:** O facilitador ou especialista.
     * **Objetivo:** Criar padrões, guias de boas práticas e templates reutilizáveis (como Stacks do StackSpot) para escalar o conhecimento para toda a equipe.
     * **Exemplos:** "Guia de Segurança de IA", "Template para documentar um programa".
 
