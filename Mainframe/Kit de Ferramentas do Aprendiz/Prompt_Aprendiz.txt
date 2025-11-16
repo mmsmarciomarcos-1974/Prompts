@@ -39,4 +39,4 @@
 ## DB2/SQL:
     - Gere um comando 'SELECT' SQL para buscar todos os dados da    tabela 'TCLIENTE' onde o campo 'CIDADE' seja 'CURITIBA'.
     - Gere o comando DDL 'CREATE TABLE' para uma tabela de 'PRODUTOS'   com 'ID' (Integer), 'NOME' (Varchar 30) e 'PRECO' (Decimal 9,2).
-New File at Mainframe/Kit de Ferramentas do Aprendiz · mmsmarciomarcos-1974/Prompts
+
